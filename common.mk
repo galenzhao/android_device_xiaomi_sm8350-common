@@ -101,6 +101,7 @@ PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor \
     vendor.qti.hardware.bluetooth_audio@2.0.vendor \
     vendor.qti.hardware.bluetooth_audio@2.1.vendor \
+    android.hardware.bluetooth.a2dp@1.0.vendor \
     vendor.qti.hardware.btconfigstore@1.0.vendor \
     vendor.qti.hardware.btconfigstore@2.0.vendor
 
@@ -167,6 +168,7 @@ PRODUCT_PACKAGES += \
     libdisplayconfig.system.qti \
     libqdMetaData \
     libqdMetaData.system \
+    libtinyxml \
     memtrack.default
 
 PRODUCT_COPY_FILES += \
@@ -367,6 +369,8 @@ PRODUCT_PACKAGES += \
 # NFC
 PRODUCT_PACKAGES += \
     com.android.nfc_extras \
+    NfcNci \
+    SecureElement \
     Tag
 
 PRODUCT_PACKAGES += \
