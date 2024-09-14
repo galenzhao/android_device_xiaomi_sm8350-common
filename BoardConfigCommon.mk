@@ -7,7 +7,6 @@
 COMMON_PATH := device/xiaomi/sm8350-common
 
 BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
-BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 
 # A/B
 AB_OTA_UPDATER := true
@@ -70,7 +69,6 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 
 DEVICE_MANIFEST_FILE := \
     $(COMMON_PATH)/hidl/manifest_lahaina.xml \
-    $(COMMON_PATH)/hidl/manifest_lineage.xml \
     $(COMMON_PATH)/hidl/manifest_xiaomi.xml
 
 # Kernel
@@ -152,9 +150,7 @@ TARGET_BOARD_PLATFORM := lahaina
 TARGET_POWERHAL_MODE_EXT := $(COMMON_PATH)/power/power-mode.cpp
 
 # PowerShare
-SOONG_CONFIG_NAMESPACES += XIAOMI_POWERSHARE
-SOONG_CONFIG_XIAOMI_POWERSHARE := WIRELESS_TX_ENABLE_PATH
-SOONG_CONFIG_XIAOMI_POWERSHARE_WIRELESS_TX_ENABLE_PATH := /sys/class/qcom-battery/reverse_chg_mode
+TARGET_POWERSHARE_PATH := /sys/class/qcom-battery/reverse_chg_mode
 
 # Properties
 TARGET_ODM_PROP += $(COMMON_PATH)/odm.prop
